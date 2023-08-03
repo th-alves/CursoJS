@@ -1,10 +1,7 @@
 console.log('Vai começar...')
-for (var c = 1;c <= 3; c++){
-    console.log(`passo ${c}`)
+for(var c = 1; c <= 6; c++){
+    console.log(`Passo ${c}`)
 }
-console.log('Fim!')
-
-
 /*
 var c = 1
 do{
