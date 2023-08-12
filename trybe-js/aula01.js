@@ -1,1 +1,3 @@
-let comidaFavorita = frango
+let idade = 22
+
+console.log(idade)
