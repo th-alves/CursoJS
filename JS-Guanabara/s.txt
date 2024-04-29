@@ -1,0 +1,39 @@
+let btn = document.getElementById("btn");
+btn.addEventListener("click", contar);
+
+function contar() {
+  let inicio = document.getElementById("inicio");
+  let fim = document.getElementById("fim");
+  let passo = document.getElementById("passo");
+  let resposta = window.document.getElementById("res");
+
+  if (
+    inicio.value.length == 0 ||
+    fim.value.length == 0 ||
+    passo.value.length == 0
+  ) {
+    alert("[ERRO] Faltam dados!");
+  } else {
+    resposta.innerHTML = "Contando: ";
+
+    let conversaoInicio = Number(inicio.value);
+    let conversaoFim = Number(fim.value);
+    let conversaoPasso = Number(passo.value);
+    if (conversaoPasso <= 0) {
+      alert('[ERRO] Passo inválido, vamos considerar "Passo" como 1');
+      conversaoPasso = 1;
+    }
+    // Contagem crescente
+    if (conversaoInicio < conversaoFim) {
+      for (let i = conversaoInicio; i <= conversaoFim; i += conversaoPasso) {
+        resposta.innerHTML += ` ${i} \u{1F449}`;
+      }
+    } else {
+      // Contagem decrescente
+      for (let i = conversaoInicio; i >= conversaoFim; i -= conversaoPasso) {
+        resposta.innerHTML += ` ${i} \u{1F449}`;
+      }
+    }
+    resposta.innerHTML += `\u{1F3C1}`;
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interação JS</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>desafio das mensagens</h1>
+    <button id="btn">Botão 1</button>
+    <button id="btn2">Botão 2</button>
+    <button id="btn3">Botão 3</button>
+    <script>
+      document.querySelector("#btn").addEventListener("click", () => {
+        alert("Você clicou no primeiro botão");
+      });
+      document.querySelector("#btn2").addEventListener("click", () => {
+        alert("Você clicou no segundo botão");
+      });
+      document.querySelector("#btn3").addEventListener("click", () => {
+        alert("Você clicou no terceiro botão");
+      });
+    </script>
+  </body>
+</html>

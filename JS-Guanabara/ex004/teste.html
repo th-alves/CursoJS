@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: blanchedalmond;
+        font-size: 1.5rem;
+      }
+      a {
+        color: #000;
+        text-underline-offset: 2px;
+        transition: 0.7s;
+      }
+      a:hover {
+        text-underline-offset: 7px;
+      }
+      li {
+        list-style: none;
+      }
+
+      #burguer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        border: 2px solid #000;
+        width: 50px;
+        border-radius: 5px;
+        text-align: center;
+        transition: background 0.7s, color 0.7s ease;
+      }
+      #close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        border: 2px solid #000;
+        width: 50px;
+        border-radius: 5px;
+        text-align: center;
+        transition: background 0.7s, color 0.7s ease;
+      }
+      #close:hover,
+      #burguer:hover {
+        background-color: #000;
+        color: #fff;
+      }
+
+      #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        background-color: #fff;
+        height: 100vh;
+        width: 200px;
+        transform: translate(-200px);
+        transition: transform 0.7s ease;
+      }
+
+      nav {
+        margin: 50px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="burguer" onclick="openSidebar()">☰</div>
+    <div id="sidebar">
+      <div id="close" onclick="closeSidebar()">✕</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Info</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script>
+      function openSidebar() {
+        document.getElementById("sidebar").style.transform = "translate(0)";
+      }
+
+      function closeSidebar() {
+        document.getElementById("sidebar").style.transform =
+          "translate(-250px)";
+      }
+    </script>
+  </body>
+</html>
