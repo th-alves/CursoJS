@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,regular,500,600,700,800,900);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: url(fireworks.jpg) no-repeat center / cover;
+  min-height: 100dvh;
+
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px black;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: normal;
+  margin: 4rem 0;
+}
+
+.contrast {
+  font-weight: bold;
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+.countdown-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  & .countdown-el {
+    text-align: center;
+    width: 150px;
+    background-color: #fff;
+    padding-top: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+
+    & .big-text {
+      font-weight: bold;
+      font-size: 6rem;
+      line-height: 1;
+      color: #000;
+      text-shadow: none;
+
+      margin: 0 2rem;
+    }
+
+    & span {
+      display: block;
+      background-color: #000;
+      width: 100%;
+
+      margin-top: 2rem;
+      padding: 1rem;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (width <= 576px) {
+  .countdown-container {
+    flex-wrap: wrap;
+
+    & .countdown-el {
+      width: 40%;
+      margin: auto;
+    }
+
+    & .big-text {
+      font-size: 4rem;
+    }
+  }
+}
