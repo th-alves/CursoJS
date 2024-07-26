@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Recipe app</title>
+  </head>
+  <body>
+    <div class="mobile-container">
+      <header>
+        <input type="text" />
+        <button id="search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <div class="fav-container">
+        <h3>Favorite Meals</h3>
+
+        <ul class="fav-meals">
+          <li>
+            <img
+              src="https://www.themealdb.com/images/ingredients/Lime.png"
+              alt="Lime"
+            />
+            <span>Limão</span>
+          </li>
+          <li>
+            <img
+              src="https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg/preview"
+              alt="Carbonara"
+            />
+            <span>Carbonara</span>
+          </li>
+
+          <li>
+            <img
+              src="https://www.themealdb.com/images/media/meals/rvxxuy1468312893.jpg"
+              alt="Lasanha"
+            />
+            <span>Lasanha</span>
+          </li>
+          <li>
+            <img
+            src="https://www.themealdb.com/images/media/meals/xxpqsy1511452222.jpg""
+            alt="Lasanha" />
+            <span>Sopa</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="meals" id="meals"></div>
+    </div>
+  </body>
+</html>
